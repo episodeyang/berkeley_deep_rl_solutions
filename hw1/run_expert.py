@@ -16,6 +16,7 @@ import tf_util
 import gym
 import load_policy
 
+
 def main():
     import argparse
     parser = argparse.ArgumentParser()
@@ -48,7 +49,7 @@ def main():
             totalr = 0.
             steps = 0
             while not done:
-                action = policy_fn(obs[None,:])
+                action = policy_fn(obs[None, :])
                 observations.append(obs)
                 actions.append(action)
                 obs, r, done, _ = env.step(action)
@@ -56,7 +57,7 @@ def main():
                 steps += 1
                 if args.render:
                     env.render()
-                if steps % 100 == 0: print("%i/%i"%(steps, max_steps))
+                if steps % 100 == 0: print("%i/%i" % (steps, max_steps))
                 if steps >= max_steps:
                     break
             returns.append(totalr)
@@ -67,6 +68,7 @@ def main():
 
         expert_data = {'observations': np.array(observations),
                        'actions': np.array(actions)}
+
 
 if __name__ == '__main__':
     main()

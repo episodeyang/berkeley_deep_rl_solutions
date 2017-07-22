@@ -12,6 +12,12 @@ I have already done it once, why not make it easy for every body?
 
 So here you go! Get ready, take a deep breath. Now let's dive in!
 
+# Doing
+
+- [ ] Homework 4, get VPG to work
+
+## Todo List
+
 
 ## Summary
 
